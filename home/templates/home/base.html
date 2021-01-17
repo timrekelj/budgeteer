@@ -21,7 +21,7 @@
         {% endif %}
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+        <!-- <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
             <div class="container-fluid">
                 <img id="logo-img" alt="Logo" src="{% static 'home/images/logo-light.svg' %}">
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -34,15 +34,18 @@
                         <li class="nav-item active">
                             <a class="nav-link" aria-current="page" href="#">Wallets</a>
                         </li>
-
-                        <!-- TODO: Login pa ta šit -->
                         <li class="nav-item active">
                             <a class="nav-link" aria-current="page" href="#">Login</a>
                         </li>
                     </ul>
                 </div>
             </div>
-          </nav>
+        </nav> -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
         {% block content %}{% endblock %}
 
         <!-- Bootstrap JS-->
