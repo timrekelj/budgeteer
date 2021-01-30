@@ -3,7 +3,7 @@
     <h1>{{ title }}</h1>
     {% for wallet in wallets %}
     	{% if wallet.owner == user %}
-	    	<h1>{{ wallet.title }}</h1>
+	    	<h1><a href="{% url 'wallet-detail' wallet.id %}">{{ wallet.title }}</a></h1>
 	    	<p>With {{ wallet.value}}€</p>
 	    	<p>From user: {{ wallet.owner }}</p>
 	    	<hr>
