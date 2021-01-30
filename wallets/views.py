@@ -9,7 +9,8 @@ from .models import Wallet
 def overview(request):
     template = loader.get_template('wallets/overview.html')
     context = {
-        'title' : 'Overview'
+        'title' : 'Overview',
+        'wallets' : Wallet.objects.all()
     }
     return HttpResponse(template.render(context, request))
 
