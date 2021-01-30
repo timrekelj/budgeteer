@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from django.views.generic import ListView, DetailView
+from django.views.generic import (
+	ListView,
+	DetailView,
+	CreateView
+)
 from .models import Wallet
 
 # Create your views here.
@@ -13,3 +17,12 @@ class WalletListView(ListView):
 
 class WalletDetailView(DetailView):
     model = Wallet
+
+class WalletCreateView(CreateView):
+    model = Wallet
+    fields = ['title', 'value']
+
+    def form_valid(self, form):
+    	form.instance.owner = self.request.user 
+    	return super().form_valid(form)
+
