@@ -4,5 +4,6 @@
 	<p>With {{ object.value}}€</p>
 	<p>From user: {{ object.owner }}</p>
 	<hr>
+	<a href="{% url 'wallet-delete' object.pk %}" class="btn btn-outline-danger" type="submit">Delete wallet</a>
 	<!-- TODO: Edit wallet value in wallet-detail page -->
 {% endblock content %}
