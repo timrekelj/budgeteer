@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'wallets.apps.WalletsConfig',
 
     #Imported apps
-    'crispy_forms'
+    'crispy_forms',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
