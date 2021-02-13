@@ -31,6 +31,7 @@ class WalletDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
         return False
 
 def changeValue(request, pk):
+    #TODO: make changing walletvalue safer and take away one of the buttons
     value = request.POST.get('value')
     wallet = get_object_or_404(Wallet, pk=pk)
     wallet.value += Decimal(value)
