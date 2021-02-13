@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from rest_framework import viewsets
+from decimal import Decimal
+#from rest_framework import viewsets
+from django.urls import reverse
 from django.shortcuts import get_object_or_404
-
 
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
@@ -15,21 +16,10 @@ from django.views.generic import (
 from .models import Wallet
 from .serializers import WalletSerializer
 
-from django.db.models import F
-
-# Create your views here.
-
 class WalletListView(ListView):
     model = Wallet
     template_name = 'wallets/overview.html' # <app>/<model>_<viewtype>.html
     context_object_name = 'wallets'
-
-def addValue(request):
-    if request.GET.get('addValue'):
-        profil = get_object_or_404(Wallet, created_by=request.user)
-        profil.value = F('value') + 10
-        profil.save(update_fields=["value"])
-        return render(request, 'wallets/wallet_detail.html')
 
 class WalletDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     model = Wallet
@@ -39,6 +29,14 @@ class WalletDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
         if self.request.user == wallet.owner:
             return True
         return False
+
+def changeValue(request, pk):
+    value = request.POST.get('value')
+    wallet = get_object_or_404(Wallet, pk=pk)
+    wallet.value += Decimal(value)
+    wallet.save()
+    return redirect('wallet-detail', pk=wallet.pk)
+
 
 class WalletCreateView(LoginRequiredMixin, CreateView):
     model = Wallet
@@ -58,6 +56,6 @@ class WalletDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return True
         return False
 
-class WalletViewSet(viewsets.ModelViewSet):
-    queryset = Wallet.objects.all().order_by('title')
-    serializer_class = WalletSerializer
+# class WalletViewSet(viewsets.ModelViewSet):
+#     queryset = Wallet.objects.all().order_by('title')
+#     serializer_class = WalletSerializer

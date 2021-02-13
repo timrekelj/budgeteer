@@ -3,13 +3,13 @@
 	<h1>{{ object.title }}</h1>
 	<p>With {{ object.value}}€</p>
 	<p>From user: {{ object.owner }}</p>
-	<form>
+	<form action="{% url 'change-value' pk=object.pk %}" method="POST">
+		{% csrf_token %}
 		<label for="changeValue"> Change value: 
-		<input type="text" id="changeValue" name="changeValue">
-		<button class="btn btn-primary" name="addValue">Add</button>
-		<button class="btn btn-primary" value="takeValue">Take</button>
+		<input type="text" id="value" name="value">
+		<button name="submit" class="btn btn-primary" value="add">Add</button>
+		<button name="" class="btn btn-primary" value="take">Take</button>
 	</form>
 	<hr>
-	<a href="{% url 'wallet-delete' object.pk %}" class="btn btn-outline-danger" type="submit">Delete wallet</a>
-	<!-- TODO: Edit wallet value in wallet-detail page -->
+	<a href="{% url 'wallet-delete' pk=object.pk %}" class="btn btn-outline-danger" type="submit">Delete wallet</a>
 {% endblock content %}
