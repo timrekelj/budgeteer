@@ -1,0 +1,115 @@
+.navButton{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.3em;
+    margin-top: 30px;
+    color: rgba(13, 150, 254, 1);
+    padding: 10px;
+}
+
+.navButton a{
+    font-family: 'IBM Plex Mono', monospace;
+    color: black;
+    margin-top: 2px;
+    margin-left: 2px;
+    position: absolute;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.logoAndDescDiv {
+    margin: 50px 150px;
+}
+
+.circle {
+    background: rgba(13, 150, 254, .3);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+.innerCircle {
+    background: rgba(13, 150, 254, 1);
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 50%;
+}
+
+.logoLetter {
+    height: 250px;
+    width: 250px;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+@keyframes descAnim {
+  0%   {margin-top:-400px; opacity: 0;}
+  100% {margin-top:0; opacity: 1;}
+}
+
+.desc {
+    font-family: 'IBM Plex Mono', monospace;
+    margin-left: 150px;
+    font-size: 3em;
+    animation-name: descAnim;
+    animation-duration: 2s;
+}
+
+.loremIpsum {
+    padding: 50px 150px;
+}
+
+.subtitle{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.8em;
+    color: rgba(13, 150, 254, 1);
+    padding: 10px;
+}
+
+.subtitle span{
+    font-family: 'IBM Plex Mono', monospace;
+    color: black;
+    margin-top: 3px;
+    margin-left: 3px;
+    position: absolute;
+    z-index: 100;
+}
+
+.subtitle-text {
+    color: black;
+    padding-right: 150px;
+}
+
+.circle-sub {
+    background: rgba(13, 150, 254, .3);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.innerCircle-sub {
+    background: rgba(13, 150, 254, 1);
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: -100px;
+    border-radius: 50%;
+}
+
+.title{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2em;
+    color: rgba(13, 150, 254, 1);
+    padding: 10px;
+}
+
+.title span{
+    font-family: 'IBM Plex Mono', monospace;
+    color: black;
+    margin-top: 3px;
+    margin-left: 3px;
+    position: absolute;
+    z-index: 100;
+}
