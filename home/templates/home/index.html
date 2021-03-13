@@ -61,26 +61,20 @@
         </nav>
 
         <!-- LOGO AND DESCRIPTION DIV -->
-        <div class="d-flex align-items-center logoAndDescDiv">
+        <div class="row align-items-center logoAndDescDiv">
 
             <!-- CIRCLES AND LOGO -->
-            <div class="d-inline-block circle">
-                <div class="innerCircle">
-                    <img alt="budgeteer logo" src="{% static 'home/images/B-white.svg' %}" class="logoLetter">
-                </div>
-            </div>
+            <img height="500px" width="500px" alt="budgeteer logo" class="col-md-4" src="{% static 'home/images/homeScreenLogo.svg' %}">
 
             <!-- DESCRIPTION -->
-            <div class="d-inline-block desc">
-                The only finance manager you will ever need
-            </div>
+            <div class="col-md-8 desc">The only finance manager you will ever need</div>
         </div>
 
         <!-- LOREM IPSUM AND CIRCLES -->
-        <div class="d-flex loremIpsum">
+        <div class="row align-items-center loremIpsum">
 
             <!-- LOREM IPSUM -->
-            <div class="d-inline-block">
+            <div class="col-md-9 subtitleNtext01">
                 <div class="subtitle">
                     <span>
                         Lorem ipsum
@@ -93,27 +87,17 @@
             </div>
 
             <!-- CIRCLES -->
-            <div class="d-inline-block">
-                <div class="circle-sub">
-                    <div class="innerCircle-sub">
-                    </div>
-                </div>
-            </div>
+            <img alt="budgeteer logo" class="col-md-3" src="{% static 'home/images/homeScreenCircles01.svg' %}" height="300px">
         </div>
 
         <!-- CIRCLES AND LOREM IPSUM -->
-        <div class="d-flex loremIpsum">
+        <div class="row align-items-center loremIpsum">
 
             <!-- CIRCLES -->
-            <div class="d-inline-block">
-                <div class="circle-sub">
-                    <div class="innerCircle-sub">
-                    </div>
-                </div>
-            </div>
+            <img alt="budgeteer logo" class="col-md-3" src="{% static 'home/images/homeScreenCircles02.svg' %}">
 
             <!-- LOREM IPSUM -->
-            <div class="d-inline-block">
+            <div class="col-md-9 subtitleNtext02">
                 <div class="subtitle">
                     <span>
                         Lorem ipsum

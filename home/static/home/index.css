@@ -1,3 +1,25 @@
+body {
+      font-family: 'Roboto', sans-serif;
+}
+
+/* NAVIGATION BAR */
+.title{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2em;
+    color: rgba(13, 150, 254, 1);
+    padding: 10px;
+}
+
+.title span{
+    font-family: 'IBM Plex Mono', monospace;
+    color: black;
+    margin-top: 3px;
+    margin-left: 3px;
+    position: absolute;
+    z-index: 100;
+}
+
 .navButton{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1.3em;
@@ -16,31 +38,10 @@
     text-decoration: none;
 }
 
+/* DIV WITH LOGO AND DECRIPTION */
 .logoAndDescDiv {
-    margin: 50px 150px;
-}
-
-.circle {
-    background: rgba(13, 150, 254, .3);
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-}
-
-.innerCircle {
-    background: rgba(13, 150, 254, 1);
-    width: 500px;
-    height: 500px;
-    margin-top: 50px;
-    margin-left: 50px;
-    border-radius: 50%;
-}
-
-.logoLetter {
-    height: 250px;
-    width: 250px;
-    margin-top: 200px;
-    margin-left: 200px;
+  padding: 50px;
+  height: 600px;
 }
 
 @keyframes descAnim {
@@ -50,12 +51,14 @@
 
 .desc {
     font-family: 'IBM Plex Mono', monospace;
-    margin-left: 150px;
+    margin-left: 50px;
     font-size: 3em;
+    width: 1000px;
     animation-name: descAnim;
     animation-duration: 2s;
 }
 
+/* FIRST SUBTITLE WITH SOME LOREM IPSUM */
 .loremIpsum {
     padding: 50px 150px;
 }
@@ -75,9 +78,12 @@
     z-index: 100;
 }
 
+.subtitleNtext02 {
+    padding-left: 50px;
+}
+
 .subtitle-text {
     color: black;
-    padding: 0 150px;
 }
 
 .circle-sub {
@@ -92,23 +98,11 @@
     width: 100px;
     height: 100px;
     margin-top: 50px;
-    margin-left: -100px;
+    margin-left: -50px;
     border-radius: 50%;
 }
 
-.title{
-    text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 2em;
-    color: rgba(13, 150, 254, 1);
-    padding: 10px;
-}
-
-.title span{
-    font-family: 'IBM Plex Mono', monospace;
-    color: black;
-    margin-top: 3px;
-    margin-left: 3px;
-    position: absolute;
-    z-index: 100;
+/* FIRST SUBTITLE WITH SOME LOREM IPSUM */
+.subtitleNtext02 {
+    padding-left: 50px;
 }
