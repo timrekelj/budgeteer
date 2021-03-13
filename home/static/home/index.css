@@ -64,7 +64,6 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1.8em;
     color: rgba(13, 150, 254, 1);
-    padding: 10px;
 }
 
 .subtitle span{
@@ -78,20 +77,20 @@
 
 .subtitle-text {
     color: black;
-    padding-right: 150px;
+    padding: 0 150px;
 }
 
 .circle-sub {
     background: rgba(13, 150, 254, .3);
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 
 .innerCircle-sub {
     background: rgba(13, 150, 254, 1);
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     margin-top: 50px;
     margin-left: -100px;
     border-radius: 50%;
