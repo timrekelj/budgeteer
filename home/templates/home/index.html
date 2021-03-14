@@ -29,9 +29,9 @@
                     <span>budgeteer</span>
                     budgeteer
                 </a>
-                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <div class="collapse navbar-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
-                    <ul class="navbar-nav d-flex">
+                    <ul class="navbar-nav d-flex navButtons">
                         {% if user.is_authenticated %}
                             <li class="nav-item active navButton">
                                 <a aria-current="page" href="{% url 'overview' %}">Wallets</a>
@@ -64,7 +64,7 @@
         <div class="row align-items-center logoAndDescDiv">
 
             <!-- CIRCLES AND LOGO -->
-            <img height="500px" width="500px" alt="budgeteer logo" class="col-md-4" src="{% static 'home/images/homeScreenLogo.svg' %}">
+            <img alt="budgeteer logo" class="col-md-4 logoCircles" src="{% static 'home/images/homeScreenLogo.svg' %}">
 
             <!-- DESCRIPTION -->
             <div class="col-md-8 desc">The only finance manager you will ever need</div>
@@ -87,17 +87,17 @@
             </div>
 
             <!-- CIRCLES -->
-            <img alt="budgeteer logo" class="col-md-3" src="{% static 'home/images/homeScreenCircles01.svg' %}" height="300px">
+            <img alt="circles" class="col-md-3 circles" src="{% static 'home/images/homeScreenCircles01.svg' %}" height="300px">
         </div>
 
         <!-- CIRCLES AND LOREM IPSUM -->
         <div class="row align-items-center loremIpsum">
 
             <!-- CIRCLES -->
-            <img alt="budgeteer logo" class="col-md-3" src="{% static 'home/images/homeScreenCircles02.svg' %}">
+            <img alt="circles" class="col-md-3 circlesHidden" src="{% static 'home/images/homeScreenCircles02.svg' %}">
 
             <!-- LOREM IPSUM -->
-            <div class="col-md-9 subtitleNtext02">
+            <div class="col-sm-12 col-md-9 subtitleNtext02">
                 <div class="subtitle">
                     <span>
                         Lorem ipsum

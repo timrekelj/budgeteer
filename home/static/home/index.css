@@ -40,8 +40,13 @@ body {
 
 /* DIV WITH LOGO AND DECRIPTION */
 .logoAndDescDiv {
-  padding: 50px;
-  height: 600px;
+  height: 450px;
+}
+
+.logoCircles {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
 }
 
 @keyframes descAnim {
@@ -53,7 +58,8 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     margin-left: 50px;
     font-size: 3em;
-    width: 1000px;
+    width: 800px;
+    margin: 0 auto;
     animation-name: descAnim;
     animation-duration: 2s;
 }
@@ -78,7 +84,7 @@ body {
     z-index: 100;
 }
 
-.subtitleNtext02 {
+.subtitleNtext01 {
     padding-left: 50px;
 }
 
@@ -86,23 +92,70 @@ body {
     color: black;
 }
 
-.circle-sub {
-    background: rgba(13, 150, 254, .3);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+/* SECOND SUBTITLE WITH SOME LOREM IPSUM */
+.circles {
+    display: block;
 }
 
-.innerCircle-sub {
-    background: rgba(13, 150, 254, 1);
-    width: 100px;
-    height: 100px;
-    margin-top: 50px;
-    margin-left: -50px;
-    border-radius: 50%;
-}
-
-/* FIRST SUBTITLE WITH SOME LOREM IPSUM */
 .subtitleNtext02 {
     padding-left: 50px;
+}
+
+
+
+/* CSS FOR MOBILE DEVICES */
+@media (max-width: 1500px) {
+
+    .logoAndDescDiv{
+        padding: 0;
+        height: 400px;
+    }
+
+    .logoCircles {
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .desc {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .loremIpsum {
+        padding: 30px 50px;
+    }
+
+    .subtitleNtext01, .subtitleNtext02 {
+        padding: 0;
+    }
+
+    .circles {
+        padding-top: 30px;
+    }
+
+    img.circlesHidden {
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+
+    a.title {
+        display: none;
+    }
+
+    .logoAndDescDiv{
+        padding: 0;
+        height: 700px;
+    }
+
+    .desc {
+        width: 400px;
+    }
+
+    .logoCircles {
+        height: 300px;
+        width: 300px;
+    }
 }
