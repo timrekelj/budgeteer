@@ -1,0 +1,43 @@
+.allWallets {
+    width: 50%;
+    margin: auto;
+}
+
+.walletLink {
+    margin: 50px auto;
+}
+
+.walletCard {
+    background: rgba(13, 150, 254, .3);
+    padding: 20px 40px;
+    margin: 20px 0;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 5px 5px black;
+}
+
+.ow-title{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2em;
+    color: rgba(13, 150, 254, 1);
+    text-shadow: 2px 2px black;
+}
+
+.ow-value {
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2em;
+    color: black;
+}
+
+.newWalletButton {
+    font-family: 'IBM Plex Mono', monospace;
+    position: absolute;
+    margin: auto;
+    padding: 20px 30px;
+    background: rgba(13, 150, 254, 1);
+    border-radius: 20px;
+    box-shadow: 3px 3px black;
+    color: white;
+}

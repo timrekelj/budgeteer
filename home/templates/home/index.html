@@ -1,122 +1,49 @@
+{% extends "home/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+{% block content %}
 
-        <link rel="stylesheet" type="text/css" href="{% static 'home/index.css' %}">
+    <!-- LOGO AND DESCRIPTION DIV -->
+    <div class="row align-items-center logoAndDescDiv">
 
-        <link rel="shortcut icon" href="{%  static 'home/images/favicon/favicon.ico' %}">
+        <!-- CIRCLES AND LOGO -->
+        <img alt="budgeteer logo" class="col-md-4 logoCircles" src="{% static 'home/images/homeScreenLogo.svg' %}">
 
-        {% if title %}
-            <title>Budgeteer - {{ title }}</title>
-        {% else %}
-            <title>Budgeteer</title>
-        {% endif %}
-    </head>
-    <body>
-        <!-- TODO: Alerts from base.html required -->
+        <!-- DESCRIPTION -->
+        <div class="col-md-8 desc">The only finance manager you will ever need</div>
+    </div>
 
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-md navbar-static-top">
-            <div class="container-fluid">
-                <a href="{% url 'home' %}" class="title">
-                    <span>budgeteer</span>
-                    budgeteer
-                </a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
-                    <ul class="navbar-nav d-flex navButtons">
-                        {% if user.is_authenticated %}
-                            <li class="nav-item active navButton">
-                                <a aria-current="page" href="{% url 'overview' %}">Wallets</a>
-                                Wallets
-                            </li>
-                            <li class="nav-item active navButton">
-                                <a aria-current="page" href="{% url 'profile' %}">Profile</a>
-                                Profile
-                            </li>
-                            <li class="nav-item active navButton">
-                                <a aria-current="page" href="{% url 'logout' %}">Logout</a>
-                                Logout
-                            </li>
-                        {% else %}
-                            <li class="nav-item active navButton">
-                                <a aria-current="page" href="{% url 'login' %}">Login</a>
-                                Login
-                            </li>
-                            <li class="nav-item active navButton">
-                                <a aria-current="page" href="{% url 'register' %}">Register</a>
-                                Register
-                            </li>
-                        {% endif %}
-                    </ul>
-                </div>
+    <!-- LOREM IPSUM AND CIRCLES -->
+    <div class="row align-items-center loremIpsum">
+
+        <!-- LOREM IPSUM -->
+        <div class="col-md-9 subtitleNtext01">
+            <div class="subtitle">
+                Lorem ipsum
             </div>
-        </nav>
-
-        <!-- LOGO AND DESCRIPTION DIV -->
-        <div class="row align-items-center logoAndDescDiv">
-
-            <!-- CIRCLES AND LOGO -->
-            <img alt="budgeteer logo" class="col-md-4 logoCircles" src="{% static 'home/images/homeScreenLogo.svg' %}">
-
-            <!-- DESCRIPTION -->
-            <div class="col-md-8 desc">The only finance manager you will ever need</div>
-        </div>
-
-        <!-- LOREM IPSUM AND CIRCLES -->
-        <div class="row align-items-center loremIpsum">
-
-            <!-- LOREM IPSUM -->
-            <div class="col-md-9 subtitleNtext01">
-                <div class="subtitle">
-                    <span>
-                        Lorem ipsum
-                    </span>
-                    Lorem ipsum
-                </div>
-                <div class="subtitle-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at pulvinar lacus, nec pretium leo. Proin dignissim vestibulum maximus. Etiam malesuada feugiat felis sed suscipit. Nulla egestas ultrices magna in ultrices. Nulla aliquet interdum tempus. Integer porta libero eu velit venenatis, et vestibulum ipsum eleifend. Cras lobortis ex purus, ac vehicula velit auctor id. Vivamus vitae urna vitae massa commodo consectetur et ut quam. Aenean laoreet diam ac gravida ultricies. Mauris consequat mi et dolor cursus, nec tincidunt diam aliquet. Nullam aliquet sagittis bibendum.
-                </div>
-            </div>
-
-            <!-- CIRCLES -->
-            <img alt="circles" class="col-md-3 circles" src="{% static 'home/images/homeScreenCircles01.svg' %}" height="300px">
-        </div>
-
-        <!-- CIRCLES AND LOREM IPSUM -->
-        <div class="row align-items-center loremIpsum">
-
-            <!-- CIRCLES -->
-            <img alt="circles" class="col-md-3 circlesHidden" src="{% static 'home/images/homeScreenCircles02.svg' %}">
-
-            <!-- LOREM IPSUM -->
-            <div class="col-sm-12 col-md-9 subtitleNtext02">
-                <div class="subtitle">
-                    <span>
-                        Lorem ipsum
-                    </span>
-                    Lorem ipsum
-                </div>
-                <div class="subtitle-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at pulvinar lacus, nec pretium leo. Proin dignissim vestibulum maximus. Etiam malesuada feugiat felis sed suscipit. Nulla egestas ultrices magna in ultrices. Nulla aliquet interdum tempus. Integer porta libero eu velit venenatis, et vestibulum ipsum eleifend. Cras lobortis ex purus, ac vehicula velit auctor id. Vivamus vitae urna vitae massa commodo consectetur et ut quam. Aenean laoreet diam ac gravida ultricies. Mauris consequat mi et dolor cursus, nec tincidunt diam aliquet. Nullam aliquet sagittis bibendum.
-                </div>
+            <div class="subtitle-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at pulvinar lacus, nec pretium leo. Proin dignissim vestibulum maximus. Etiam malesuada feugiat felis sed suscipit. Nulla egestas ultrices magna in ultrices. Nulla aliquet interdum tempus. Integer porta libero eu velit venenatis, et vestibulum ipsum eleifend. Cras lobortis ex purus, ac vehicula velit auctor id. Vivamus vitae urna vitae massa commodo consectetur et ut quam. Aenean laoreet diam ac gravida ultricies. Mauris consequat mi et dolor cursus, nec tincidunt diam aliquet. Nullam aliquet sagittis bibendum.
             </div>
         </div>
 
-        <!-- FOOTER -->
-        <footer class="text-center">
-            <div>Created in 2020 / 2021.</div>
-            <div>Author: Tim Rekelj</div>
-        </footer>
+        <!-- CIRCLES -->
+        <img alt="circles" class="col-md-3 circles" src="{% static 'home/images/homeScreenCircles01.svg' %}" height="300px">
+    </div>
 
-        <!-- Bootstrap JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    </body>
-</html>
+    <!-- CIRCLES AND LOREM IPSUM -->
+    <div class="row align-items-center loremIpsum">
+
+        <!-- CIRCLES -->
+        <img alt="circles" class="col-md-3 circlesHidden" src="{% static 'home/images/homeScreenCircles02.svg' %}">
+
+        <!-- LOREM IPSUM -->
+        <div class="col-sm-12 col-md-9 subtitleNtext02">
+            <div class="subtitle">
+                Lorem ipsum
+            </div>
+            <div class="subtitle-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at pulvinar lacus, nec pretium leo. Proin dignissim vestibulum maximus. Etiam malesuada feugiat felis sed suscipit. Nulla egestas ultrices magna in ultrices. Nulla aliquet interdum tempus. Integer porta libero eu velit venenatis, et vestibulum ipsum eleifend. Cras lobortis ex purus, ac vehicula velit auctor id. Vivamus vitae urna vitae massa commodo consectetur et ut quam. Aenean laoreet diam ac gravida ultricies. Mauris consequat mi et dolor cursus, nec tincidunt diam aliquet. Nullam aliquet sagittis bibendum.
+            </div>
+        </div>
+    </div>
+{% endblock content %}

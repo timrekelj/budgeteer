@@ -1,13 +1,23 @@
-{% extends "wallets/base.html" %}
+{% extends "home/base.html" %}
+{% load static %}
+
 {% block content %}
-    <h1>{{ title }}</h1>
-    {% for wallet in wallets %}
-    	{% if wallet.owner == user %}
-	    	<h1><a href="{% url 'wallet-detail' wallet.id %}">{{ wallet.title }}</a></h1>
-	    	<p>With {{ wallet.value}}€</p>
-	    	<p>From user: {{ wallet.owner }}</p>
-	    	<hr>
-	    {% endif %}
-    {% endfor %}
-    <a class="btn btn-primary" href="{% url 'wallet-create' %}">Create new Wallet</a>
+    <div class="allWallets">
+        <h1>{{ title }}</h1>
+        {% for wallet in wallets %}
+        	{% if wallet.owner == user %}
+                    <a href="{% url 'wallet-detail' wallet.id %}" class="walletLink">
+                        <div class="walletCard row">
+                            <div class="col-md-8 ow-title">
+                                {{ wallet.title }}
+                            </div>
+                	    	<div class="col-md-4 ow-value">
+                                {{ wallet.value}}€
+                            </div>
+                        </div>
+                    </a>
+    	    {% endif %}
+        {% endfor %}
+        <a class="newWalletButton" href="{% url 'wallet-create' %}">Create new Wallet</a>
+    </div>
 {% endblock content %}

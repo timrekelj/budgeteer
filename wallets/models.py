@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.db.models import Sum
 from django.urls import reverse
 
 class Wallet(models.Model):
@@ -11,6 +12,6 @@ class Wallet(models.Model):
 
     def __str__(self):
         return self.title
-        
+
     def get_absolute_url(self):
     	return reverse('wallet-detail', kwargs={'pk': self.pk})

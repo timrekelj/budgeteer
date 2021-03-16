@@ -1,0 +1,46 @@
+body {
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      position: relative;
+      margin: 0;
+      padding-bottom: 80px;
+      box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+/* NAVIGATION BAR */
+.title{
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2em;
+    color: rgba(13, 150, 254, 1);
+    padding: 10px;
+    text-shadow: 3px 3px black;
+}
+
+.navButton{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.3em;
+    margin-top: 30px;
+    color: rgba(13, 150, 254, 1);
+    padding: 10px;
+    text-shadow: 2px 2px black;
+}
+
+
+footer {
+    font-family: 'IBM Plex Mono', monospace;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background: rgba(13, 150, 254, .3);
+    padding: 20px;
+}
