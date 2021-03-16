@@ -22,13 +22,13 @@ a:hover {
     font-size: 2em;
     color: rgba(13, 150, 254, 1);
     padding: 10px;
-    text-shadow: 3px 3px black;
+    font-weight: bold;
+    text-shadow: 3px 2px black;
 }
 
 .navButton{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1.3em;
-    margin-top: 30px;
     color: rgba(13, 150, 254, 1);
     padding: 10px;
     text-shadow: 2px 2px black;

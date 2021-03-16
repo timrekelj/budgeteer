@@ -1,0 +1,43 @@
+.loginSection {
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(13, 150, 254, .3);
+    box-shadow: 3px 3px black;
+    text-decoration: none;
+}
+
+fieldset {
+    color: rgba(13, 150, 254, 1);
+}
+
+.loginTitle {
+    color: rgba(13, 150, 254, 1);
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-size: 1.5em;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.loginButton {
+    background: rgba(13, 150, 254, 1);
+    padding: 7px 35px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.loginButton:hover {
+    color: black;
+}
+
+.loginSignupText {
+    padding-top: 20px;
+    vertical-align: middle;
+    height: auto;
+}

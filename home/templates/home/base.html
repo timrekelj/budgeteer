@@ -12,6 +12,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'home/css/base.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'home/css/overview.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'home/css/index.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'home/css/login.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'home/css/logout.css' %}">
 
         <link rel="shortcut icon" href="{%  static 'home/images/favicon/favicon.ico' %}">
 
@@ -27,10 +29,10 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-md navbar-static-top">
             <div class="container-fluid">
-                <a href="{% url 'home' %}"  class="title">
-                    budgeteer
-                </a>
                 <div class="collapse navbar-collapse">
+                    <a href="{% url 'home' %}"  class="title">
+                        budgeteer
+                    </a>
                     <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
                     <ul class="navbar-nav d-flex navButtons">
                         {% if user.is_authenticated %}
