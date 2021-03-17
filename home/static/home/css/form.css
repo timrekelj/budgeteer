@@ -1,4 +1,4 @@
-.loginSection {
+.formSection {
     width: 70%;
     margin: 30px auto;
     padding: 20px;
@@ -12,7 +12,7 @@ fieldset {
     color: rgba(13, 150, 254, 1);
 }
 
-.loginTitle {
+.formTitle {
     color: rgba(13, 150, 254, 1);
     text-shadow: 2px 2px black;
     text-align: center;
@@ -21,7 +21,7 @@ fieldset {
     margin-bottom: 10px;
 }
 
-.loginButton {
+.formButton {
     background: rgba(13, 150, 254, 1);
     padding: 7px 35px;
     color: white;
@@ -32,11 +32,11 @@ fieldset {
     float: right;
 }
 
-.loginButton:hover {
+.formButton:hover {
     color: black;
 }
 
-.loginSignupText {
+.formMutedText {
     padding-top: 20px;
     vertical-align: middle;
     height: auto;

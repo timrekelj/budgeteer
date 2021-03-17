@@ -22,7 +22,7 @@ class WalletListView(ListView):
 
 class WalletDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
 	model = Wallet
-	
+
 	def test_func(self):
 		wallet = self.get_object()
 		if self.request.user == wallet.owner:

@@ -1,0 +1,44 @@
+.deleteContainer {
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(13, 150, 254, .3);
+    box-shadow: 3px 3px black;
+}
+
+.deleteTitle {
+    color: black;
+}
+
+.deleteNoButton {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background: rgba(244, 104, 104, 1);
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+}
+
+.deleteNoButton a{
+    color: white;
+
+}
+
+.deleteNoButton a:hover{
+    color: black;
+}
+
+.deleteYesButton {
+    margin: 10px 10px 10px 0;
+    padding: 10px 30px;
+    border: none;
+    background: rgba(13, 150, 254, 1);
+    color: black;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+}
+
+.deleteYesButton:hover{
+    color: white;
+}

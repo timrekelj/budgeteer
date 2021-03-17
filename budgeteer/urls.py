@@ -23,5 +23,4 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('home.urls')),
     path('wallets/', include('wallets.urls')),
-
 ]

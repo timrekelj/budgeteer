@@ -1,0 +1,57 @@
+.walletSection {
+    border-radius: 20px;
+    background: rgba(13, 150, 254, .3);
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+}
+
+
+.walletSection h1 {
+    color: rgba(13, 150, 254, 1);
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-size: 2em;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.walletSection p {
+    color: black;
+    font-size: 1.3em;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.walletSection label {
+    color: black;
+    font-size: 1.3em;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.walletSection input{
+    border: none;
+    border-bottom: 1px solid rgba(13, 150, 254, 1);
+    background: rgba(13, 150, 255, 0);
+}
+
+.walletAddValue {
+    background: rgba(13, 150, 254, 1);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.walletDeleteButton {
+    margin: 15px 0;
+}
+
+.walletDeleteButton a{
+    background: rgba(244, 104, 104, 1);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+}

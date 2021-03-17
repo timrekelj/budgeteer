@@ -1,16 +1,17 @@
-{% extends "users/base.html" %}
+{% extends "home/base.html" %}
 {% block content %}
-    <div class="content-section">
+    <div class="container">
     	<form method="POST">
 			{% csrf_token %}
-			<fieldset class="form-group">
-				<legend class="border-bottom mb-4">Delete Wallet</legend>
+			<fieldset class="form-group deleteTitle">
 				<h2>Are you sure you want to delete the post "{{ object.title }}"?</h2>
 			</fieldset>
 			<div class="form-group">
-				<button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
-				<a href="{% url 'overview' %}" class="btn btn-outline-secondary">No, Cancel</a>
-			</div>
+				<button class="deleteYesButton" type="submit">Yes, Delete</button>
+                <button class="deleteNoButton">
+                    <a href="{% url 'overview' %}">No, Cancel</a>
+                </button>
+            </div>
 		</form>
     </div>
 {% endblock content %}
