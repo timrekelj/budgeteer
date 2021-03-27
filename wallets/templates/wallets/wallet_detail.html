@@ -2,18 +2,22 @@
 {% block content %}
 	<div class="walletSection items-align-center">
 		<h1>{{ object.title }}</h1>
-		<p>Value: {{ object.value}}€</p>
-		<p>Owner: {{ object.owner }}</p>
-		<div>
-			<form autocomplete="off" action="{% url 'change-value' pk=object.pk %}" method="POST">
-				{% csrf_token %}
-				<label for="changeValue"> Change value:
-				<input type="text" id="value" name="value">
-				<button name="submit" class="walletAddValue" value="add">Change</button>
-			</form>
-		</div>
-		<div class="walletDeleteButton">
-			<a href="{% url 'wallet-delete' pk=object.pk %}" type="submit">Delete wallet</a>
+		<div class="row">
+			<div class="col-md-7 value">
+				<p>{{ object.value}}€</p>
+			</div>
+			<div class="col-md-5 items-align-center changeValueForm">
+				<form autocomplete="off" action="{% url 'change-value' pk=object.pk %}" method="POST">
+					{% csrf_token %}
+					<label for="changeValue"> Change value:
+					<div>
+						<input type="text" id="value" name="value">
+					</div>
+					<button type="submit" name="add" class="walletChangeValue">Add</button>
+					<button type="submit" name="take" class="walletChangeValue">Take</button>
+					<a href="{% url 'wallet-delete' pk=object.pk %}" type="submit" class="walletDeleteButton">Delete wallet</a>
+				</form>
+			</div>
 		</div>
 	</div>
 {% endblock content %}

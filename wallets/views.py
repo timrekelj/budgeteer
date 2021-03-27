@@ -4,6 +4,7 @@ from django.template import loader
 from decimal import Decimal
 from django.db.models import Sum
 from django.urls import reverse
+from django.contrib import messages
 from django.shortcuts import get_object_or_404
 
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -32,11 +33,20 @@ class WalletDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
 
 def changeValue(request, pk):
     #TODO: make changing walletvalue safer and take away one of the buttons
-    value = request.POST.get('value')
-    wallet = get_object_or_404(Wallet, pk=pk)
-    wallet.value += Decimal(value)
-    wallet.save()
-    return redirect('wallet-detail', pk=wallet.pk)
+	value = request.POST.get('value')
+	wallet = get_object_or_404(Wallet, pk=pk)
+	if value != '':
+		if Decimal(value) > 0:
+			if 'add' in request.POST:
+				wallet.value += Decimal(value)
+			elif 'take' in request.POST:
+				wallet.value -= Decimal(value)
+			wallet.save()
+		else:
+			messages.info(request, 'Value has to be bigger than 0.')
+	else:
+		messages.info(request, 'Value has to be bigger than 0.')
+	return redirect('wallet-detail', pk=wallet.pk)
 
 
 class WalletCreateView(LoginRequiredMixin, CreateView):
