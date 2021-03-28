@@ -53,6 +53,7 @@
 .walletSection .value p{
     font-size: 4em;
     text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .walletSection .value {
